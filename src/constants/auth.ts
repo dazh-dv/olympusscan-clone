@@ -1,0 +1,6 @@
+export const typeLogin = "form_login"
+export const typeRegister = "form_register"
+export const typeResetPass = "form_reset_pass"
+export const nameSessionCookie = "Session_enum"
+export const getSession = "get_session"
+export const typelogout = "logout"

@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-white
+  }
+  .flex-start {
+    @apply items-center flex justify-start;
+  }
+  .flex-end {
+    @apply items-center flex justify-end;
+  }
+  .flex-center {
+    @apply items-center flex justify-center;
+  }
+  .flex-between {
+    @apply items-center flex justify-between;
+  }
+  .absolute-b-left {
+    @apply absolute left-0 bottom-0;
+  }
+  
+  body {
+    @apply bg-gray-900 contents;
+  }
+
+  *::-webkit-scrollbar {
+    @apply bg-gray-800 rounded-sm;
+  }
+
+  *::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply bg-gray-500 rounded-sm;
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cabin), sans-serif;
+}
+
+a,b,blockquote,button,div,figure,input,p,select,span,textarea {
+  font-family: var(--font-poppins), sans-serif;
+}
+.font-header {
+  font-family: var(--font-cabin), sans-serif;
+}
+
+.i-line-md-loading-twotone-loop {
+  --un-icon: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' display='inline-block' vertical-align='middle' width='1em' height='1em' xmlns='http://www.w3.org/2000/svg' %3E%3Cg fill='none' stroke='currentColor' stroke-linecap='round' stroke-width='2'%3E%3Cpath stroke-dasharray='60' stroke-dashoffset='60' stroke-opacity='.3' d='M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='1.3s' values='60;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='15' stroke-dashoffset='15' d='M12 3C16.9706 3 21 7.02944 21 12'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.3s' values='15;0'/%3E%3CanimateTransform attributeName='transform' dur='1.5s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  background-color: currentColor;
+  color: inherit;
+  display: inline-block;
+  height: 1em;
+  -webkit-mask: var(--un-icon) no-repeat;
+  mask: var(--un-icon) no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  vertical-align: middle;
+  width: 1em;
+}
+
+
+
+
