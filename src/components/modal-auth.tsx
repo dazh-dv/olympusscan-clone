@@ -22,28 +22,11 @@ export default function ModalAuth(){
       return typeLogin
     })
   }
-  const handleSubmit =  (data: FormData) => {
+  
+  const handleSubmit =  (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
     setErrors({})
     setProcess(true)
-
-    fetch(`/api/auth?type=${typeForm}`, {
-      method: 'POST',
-      body: data,
-    })
-    .then(res => res.json())
-    .then(res => {
-      setErrors(res.errors)
-      if(res.data.user){
-        setAuth(res.data.user)
-        setShowModal(false)
-      }
-      return
-    })
-    .catch(err => console.log(err))
-    .finally(() => {
-      setProcess(false)
-      return
-    })
   }
 
   return(
@@ -78,10 +61,10 @@ export default function ModalAuth(){
           </button>
         )}
       >
-        <form action={handleSubmit} className="w-full max-w-96 max-h-160 h-full transition-height bg-gray-800/80 backdrop-blur rounded-xl pt-8 px-2 pb-2 md:px-8 md:pb-8 overflow-hidden">
+        <form onSubmit={handleSubmit} className="w-full max-w-96 max-h-160 h-full transition-height bg-gray-800/80 backdrop-blur rounded-xl pt-8 px-2 pb-2 md:px-8 md:pb-8 overflow-hidden">
           <div className="flex-center flex-col gap-2 mb-4 md:mb-8">
             <div className="p-2 bg-neutral-700/80 rounded-full border border-slate-600">
-              <img alt="logo" src="https://olympusv2.gg/olympus-logo-96.webp" className="w-18" />
+              <img alt="logo" src="/olympus-logo-96.webp" className="w-18" />
             </div>
             <div className="text-2xl font-bold">Bienvenido de nuevo!</div>
             <p className="font-light text-xs text-center px-8 h-8 text-slate-400 line-clamp-3">Ingresa tus credenciales para acceder a tu cuenta.</p>
