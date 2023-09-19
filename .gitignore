@@ -6,6 +6,16 @@ bun.lockb
 /.pnp
 .pnp.js
 
+# local env files
+.env
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# vercel
+.vercel
+
 # testing
 /coverage
 
@@ -24,13 +34,3 @@ bun.lockb
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
