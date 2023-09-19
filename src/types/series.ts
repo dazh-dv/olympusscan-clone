@@ -28,7 +28,7 @@ export interface TypeSeriePopular_Novel {
   id:           number;
   name:         string;
   slug:         string;
-  status:       TypeStatusSerieNovel;
+  status:       TypeStatusSerieNovel | null;
   cover:        string;
   cover_srcset: string;
   type:         string;

@@ -41,7 +41,7 @@ export function CardSquare ({ large = false, className = "", item, }:{ large?: b
           <figcaption className="font-header text-lg md:text-xl leading-5 line-clamp-3">{item.name}</figcaption>
         </LinkCard>
         <div className="flex-center gap-1 md:gap-2">
-          <div className="text-sm font-header h-8 bg-emerald-400/25 backdrop-blur flex-center px-3 rounded-lg capitalize">{item.status.name}</div>
+          {item.status && <div className="text-sm font-header h-8 bg-emerald-400/25 backdrop-blur flex-center px-3 rounded-lg capitalize">{item.status.name}</div>}
         </div>
       </div>
     </figure>
